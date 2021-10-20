@@ -2,4 +2,4 @@
 
 npm install <br />
 npm start <br />
-git chechout new_brach
+membuat brach : git branch new_brach
