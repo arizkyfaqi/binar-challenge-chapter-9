@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+#game-detail-pages-wrapper {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  height: 100vh;
+  background: #9c835f;
+  --back-btn-color: #724c21;
+  --title-color: #f9b23d;
+  --challenge-color: #bd0000;
+  --winner-color: #4c9654;
+  --draw-color: #035b0c;
+  --selection-color: #c4c4c4;
+}
+
+image {
+  padding: 20rem;
+  justify-content: end;
+}
+
+.header {
+  align-items: center;
+  height: 10vh;
+}
+
+.header h1 {
+  font-size: 5vmin;
+  color: var(--title-color);
+  font-family: "Open Sans", sans-serif;
+}
+
+.header a {
+  display: flex;
+  font-size: 2.5rem;
+  color: var(--back-btn-color);
+  text-decoration: none;
+}
+
+.logo {
+  height: 50px;
+}
+
+.refresh {
+  position: absolute;
+  left: 50%;
+  padding: 10px;
+  transform: translate(-50%, -30%);
+}
+
+.refresh img {
+  max-width: 8vh;
+  cursor: pointer;
+}
+
+#game-detail-pages-wrapper {
+  padding: 30px;
+}
