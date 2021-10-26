@@ -1,7 +1,9 @@
 import { lazy } from "react";
-import EditProfile from "../components/EditPage";
-import ChangePassword from "../components/PasswordPage";
-import ProfilePage from "../components/ProfilePage";
+// import EditProfile from "../components/EditPage";
+// import App from "../components/onChange";
+import App from "../components/ProfileOnChange";
+// import ChangePassword from "../components/PasswordPage";
+// import ProfilePage from "../components/ProfilePage";
 
 // const CreateUser = lazy(() => import("../components/CreateUser"));
 // const SearchUser = lazy(() => import("../components/SearchUser"));
@@ -15,20 +17,25 @@ const routes = [
   //   exact: true,
   // },
   {
-    path: "/profile",
-    component: <ProfilePage />,
+    path: "/change",
+    component: <App />,
     exact: false,
   },
-  {
-    path: "/edit-profile",
-    component: <EditProfile />,
-    exact: false,
-  },
-  {
-    path: "/change-password",
-    component: <ChangePassword />,
-    exact: false,
-  },
+  // {
+  //   path: "/profile",
+  //   component: <ProfilePage />,
+  //   exact: false,
+  // },
+  // {
+  //   path: "/edit-profile",
+  //   component: <EditProfile />,
+  //   exact: false,
+  // },
+  // {
+  //   path: "/change-password",
+  //   component: <ChangePassword />,
+  //   exact: false,
+  // },
   // {
   //   path: "/search",
   //   component: <SearchUser />,
