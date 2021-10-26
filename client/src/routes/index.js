@@ -17,7 +17,7 @@ const routes = [
   //   exact: true,
   // },
   {
-    path: "/change",
+    path: "/profile",
     component: <App />,
     exact: false,
   },
