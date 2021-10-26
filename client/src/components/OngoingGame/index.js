@@ -2,6 +2,8 @@ import { React, Component } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import NavbarClass from "../Navbar";
 import "./style.css";
+import pic1 from "../../img/rps-istock.jpg";
+// import Image from 'react-bootstrap/Image';
 
 // import { CgProfile } from "react-icons/cg";
 // import { GrEdit } from "react-icons/gr";
@@ -24,8 +26,7 @@ class OngoingGame extends Component {
                     <CgMediaLive style={{ width: "35px", height: "45px" }} />
                   </Col>
                   <Col sm={8}>
-                    {/* eslint-disable-next-line */}
-                    <a href="">Current games</a>
+                    <a href="./Ongoinggame">Current games</a>
                   </Col>
                   <Col
                     style={{
@@ -48,10 +49,9 @@ class OngoingGame extends Component {
                     />
                   </Col>
                   <Col sm={8}>
-                    {/* eslint-disable-next-line */}
-                    <a href="">Upcoming games</a>
+                    <a href="./Comingsoongames">Upcoming games</a>
                   </Col>
-                  {/* PASSWORD */}
+
                   <Col
                     style={{
                       display: "flex",
@@ -65,21 +65,17 @@ class OngoingGame extends Component {
               </div>
             </Col>
             <Col sm={8}>
-              <div className="profile-right">
-                <Row>
-                  <Col></Col>
-                  <Col sm={4}>
+              <div className="main-game">
+                <h5>ENJOY YOUR GAME</h5>
+                <img src={pic1} alt="" />
+                {/* <Row>
+                  <Col sm={5}>
                     <h4>ENJOY YOUR GAME</h4>
-                    <Container>
-                      <Row>
-                        <Col sm>game 1</Col>
-                        <Col sm>game 2</Col>
-                        <Col sm>game 3</Col>
+                      <Row className="size2">
+                        <img src={pic1} alt="" />
                       </Row>
-                    </Container>
                   </Col>
-                  <Col></Col>
-                </Row>
+                </Row> */}
               </div>
             </Col>
           </Row>

@@ -11,8 +11,8 @@ class NavbarClass extends Component {
             <Navbar.Brand href="#home">Navbar</Navbar.Brand>
             <Nav className="me-auto nav">
               <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#game">Game</Nav.Link>
-              <Nav.Link href="#profile">Profile</Nav.Link>
+              <Nav.Link href="./games">Game</Nav.Link>
+              <Nav.Link href="./change">Profile</Nav.Link>
               <Nav.Link href="#logout" className="logout">
                 Logout
               </Nav.Link>

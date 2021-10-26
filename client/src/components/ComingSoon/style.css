@@ -46,8 +46,8 @@
 /* PROFILE RIGHT */
 
 .profile-right {
-  /* width: 40%; */
-  margin-left: -25%;
+  width: 90%;
+  margin-left: -40%;
   /* display: flex; */
   /* border: 1px solid black; */
   text-align: center;
@@ -62,4 +62,20 @@
 .profile-right p {
   margin-top: 20px;
   font-size: 16px;
+}
+
+.size{
+  left: 50%;
+  width: auto;
+  max-width: 300px;
+  height: auto;
+  max-height: 300px;
+}
+
+.right-rows{
+  /* margin-right: 50%; */
+  margin-left: 75%;
+  /* text-align: center; */
+  height: auto;
+  margin-top: -5%;
 }

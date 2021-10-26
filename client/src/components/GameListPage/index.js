@@ -24,7 +24,7 @@ class GameList extends Component {
                     <CgMediaLive style={{ width: "35px", height: "45px" }} />
                   </Col>
                   <Col sm={8}>
-                    <a href="./Ongoinggames">Current games</a>
+                    <a href="./Ongoinggame">Current games</a>
                   </Col>
                   <Col
                     style={{
@@ -49,7 +49,7 @@ class GameList extends Component {
                   <Col sm={8}>
                     <a href="./Comingsoongames">Upcoming games</a>
                   </Col>
-                  {/* PASSWORD */}
+                  {/* GAME LIST PAGES */}
                   <Col
                     style={{
                       display: "flex",

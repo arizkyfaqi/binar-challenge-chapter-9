@@ -47,10 +47,10 @@
 
 .profile-right {
   /* width: 40%; */
-  margin-left: -25%;
+  margin-left: 10%;
   /* display: flex; */
   /* border: 1px solid black; */
-  text-align: center;
+  text-align: right;
 }
 
 .profile-right h4 {
@@ -62,4 +62,19 @@
 .profile-right p {
   margin-top: 20px;
   font-size: 16px;
+}
+
+.size2{
+  /* position: absolute; */
+  right: 10px;
+  height: auto;
+  max-height: 300px;
+  width: auto;
+  max-width: 240px;
+}
+
+.main-game h5 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 160px;
 }

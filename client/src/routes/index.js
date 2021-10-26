@@ -1,10 +1,11 @@
-// import { lazy } from "react";
-import EditProfile from "../components/EditPage";
-import ChangePassword from "../components/PasswordPage";
-import ProfilePage from "../components/ProfilePage";
+// // import { lazy } from "react";
+// import EditProfile from "../components/EditPage";
+// import ChangePassword from "../components/PasswordPage";
+// import ProfilePage from "../components/ProfilePage";
 import GameList from "../components/GameListPage";
 import OngoingGame from "../components/OngoingGame";
 import ComingSoon from "../components/ComingSoon";
+import App from "../components/ProfileOnChange";
 
 // const CreateUser = lazy(() => import("../components/CreateUser"));
 // const SearchUser = lazy(() => import("../components/SearchUser"));
@@ -17,34 +18,39 @@ const routes = [
   //   component: <CreateUser />,
   //   exact: true,
   // },
-  {
-    path: "/profile",
-    component: <ProfilePage />,
-    exact: false,
-  },
-  {
-    path: "/edit-profile",
-    component: <EditProfile />,
-    exact: false,
-  },
-  {
-    path: "/change-password",
-    component: <ChangePassword />,
-    exact: false,
-  },
+  // {
+  //   path: "/profile",
+  //   component: <ProfilePage />,
+  //   exact: false,
+  // },
+  // {
+  //   path: "/edit-profile",
+  //   component: <EditProfile />,
+  //   exact: false,
+  // },
+  // {
+  //   path: "/change-password",
+  //   component: <ChangePassword />,
+  //   exact: false,
+  // },
   {
     path: "/Games",
     component: <GameList />,
     exact: false,
   },
   {
-    path: "/Ongoinggames",
+    path: "/Ongoinggame",
     component: <OngoingGame />,
     exact: false,
   },
   {
     path: "/Comingsoongames",
     component: <ComingSoon />,
+    exact: false,
+  },
+  {
+    path: "/change",
+    component: <App />,
     exact: false,
   },
   // {

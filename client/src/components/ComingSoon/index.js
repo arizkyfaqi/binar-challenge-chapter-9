@@ -1,5 +1,5 @@
 import { React, Component } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Stack } from "react-bootstrap";
 import NavbarClass from "../Navbar";
 import "./style.css";
 
@@ -9,6 +9,8 @@ import "./style.css";
 import { BsChevronRight } from "react-icons/bs";
 import { FaRegClock } from "react-icons/fa";
 import { CgMediaLive } from "react-icons/cg";
+import pic1 from "../../img/rps-istock.jpg";
+import pic2 from "../../img/main-bg.jpg";
 
 class ComingSoon extends Component {
   render() {
@@ -24,8 +26,7 @@ class ComingSoon extends Component {
                     <CgMediaLive style={{ width: "35px", height: "45px" }} />
                   </Col>
                   <Col sm={8}>
-                    {/* eslint-disable-next-line */}
-                    <a href="">Current games</a>
+                    <a href="./Ongoinggame">Current games</a>
                   </Col>
                   <Col
                     style={{
@@ -48,8 +49,7 @@ class ComingSoon extends Component {
                     />
                   </Col>
                   <Col sm={8}>
-                    {/* eslint-disable-next-line */}
-                    <a href="">Upcoming games</a>
+                    <a href="./Comingsoongames">Upcoming games</a>
                   </Col>
                   {/* PASSWORD */}
                   <Col
@@ -67,16 +67,24 @@ class ComingSoon extends Component {
             <Col sm={8}>
               <div className="profile-right">
                 <Row>
+                  <Col className="right-rows" sm={4}>
+                    <h4>COMING SOON</h4>
+                  </Col>
+                </Row>
+                <Row>
                   <Col></Col>
                   <Col sm={4}>
-                    <h4>COMING SOON</h4>
-                    <Container>
-                      <Row>
-                        <Col sm>game 1</Col>
-                        <Col sm>game 2</Col>
-                        <Col sm>game 3</Col>
-                      </Row>
-                    </Container>
+                    <Stack direction="horizontal" gap={3}>
+                      <div>
+                        <img src={pic1} alt="" className="size" />
+                      </div>
+                      <div>
+                        <img src={pic2} alt="" className="size" />
+                      </div>
+                      <div>
+                        <img src={pic1} alt="" className="size" />
+                      </div>
+                    </Stack>
                   </Col>
                   <Col></Col>
                 </Row>
