@@ -22,42 +22,44 @@ const GameDetailPages = () => {
           </Stack>
         </Row>
         <Row>
-          <Col xs={6} md={4}>
-            <Stack gap={5}>
-              <div classname="image">
+          <Col xs={6} md={4} className="player-data">
+            <Stack gap={4}>
+              <div className="image">
                 <Image src="./assets/batu.png" />
               </div>
-              <div classname="image">
+              <div className="image">
                 <Image src="./assets/gunting.png" />
               </div>
-              <div classname="image">
+              <div className="image">
                 <Image src="./assets/kertas.png" />
               </div>
             </Stack>
           </Col>
-          <Col xs={6} md={4}>
+          <Col xs={6} md={4} className="match">
             <h1>VS</h1>
           </Col>
-          <Col xs={6} md={4}>
-            <Stack gap={5}>
-              <div classname="image">
+          <Col xs={6} md={4} className="comp-data">
+            <Stack gap={4}>
+              <div className="image">
                 <Image src="./assets/batu.png" />
               </div>
-              <div classname="image">
+              <div className="image">
                 <Image src="./assets/gunting.png" />
               </div>
-              <div classname="image">
+              <div className="image">
                 <Image src="./assets/kertas.png" />
               </div>
             </Stack>
           </Col>
+          <Stack>
+            <div class="refresh">
+              {/* <a href="javascript:location.reload(true)"> */}
+              <Image src="./assets/refresh.png" />
+              {/* </a> */}
+            </div>
+          </Stack>
         </Row>
       </Container>
-      <div class="refresh">
-        {/* <a href="javascript:location.reload(true)"> */}
-        <Image src="./assets/refresh.png" />
-        {/* </a> */}
-      </div>
       <StickyHeadTable />
     </div>
   );

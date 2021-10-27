@@ -11,16 +11,13 @@
   --winner-color: #4c9654;
   --draw-color: #035b0c;
   --selection-color: #c4c4c4;
-}
-
-image {
-  padding: 20rem;
-  justify-content: end;
+  text-align: center;
+  padding: 10px;
 }
 
 .header {
-  align-items: center;
   height: 10vh;
+  margin-bottom: 20px;
 }
 
 .header h1 {
@@ -37,13 +34,13 @@ image {
 }
 
 .logo {
-  height: 50px;
+  height: 60px;
 }
 
 .refresh {
   position: absolute;
   left: 50%;
-  padding: 10px;
+  padding: 20px;
   transform: translate(-50%, -30%);
 }
 
@@ -52,6 +49,13 @@ image {
   cursor: pointer;
 }
 
-#game-detail-pages-wrapper {
-  padding: 30px;
+#table-wrapper {
+  padding: 10px;
+  margin-top: 10%;
+}
+
+.leaderboard {
+  position: absolute;
+  left: 45%;
+  top: 70%;
 }
