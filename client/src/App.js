@@ -1,25 +1,30 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import Home from "./components/pages/Home";
-import CarouselBox from "./components/CarouselBox";
-import Footer from "./components/Footer";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import React, { Suspense } from "react";
 import "./App.css";
+import routes from "./routes";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-
-function App() {
-  return (
-    <>
-      <Router>
-        <Navbar />
-        <Switch>
-          <Route path="/" exact component={Home} />
-        </Switch>
-        <CarouselBox />
-        <Footer />
-      </Router>
-    </>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <>
+        <Router>
+          <Switch>
+            {routes.map((route) => {
+              return (
+                <Route key={route.path} exact={route.exact} path={route.path}>
+                  <Suspense fallback={<div>Loading...</div>}>
+                    {route.component}
+                  </Suspense>
+                </Route>
+              );
+            })}
+          </Switch>
+        </Router>
+      </>
+    );
+  }
 }
 
 export default App;

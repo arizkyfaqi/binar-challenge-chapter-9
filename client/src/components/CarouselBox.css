@@ -1,5 +1,7 @@
 .carousel {
     padding: 40px;
+    margin-top: 60px;
+    height: 110vh;
 }
 .carousel-img {
   width: 100%;
@@ -19,7 +21,9 @@
 
 #text >h2 {
     font-size: 35px;
+    color: black;
 }
+
 
 #text >p {
     font-size: 55px;
