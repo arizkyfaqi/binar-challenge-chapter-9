@@ -2,6 +2,7 @@
     padding: 40px;
     margin-top: 60px;
     height: 110vh;
+    width: 100%;
 }
 .carousel-img {
   width: 100%;
@@ -13,10 +14,10 @@
 
 #slider {
   background: rgb(235, 237, 241);
-  position:relative;
   display:flex;
   justify-content: center;
   align-items: center;
+  width:99.5vw;
 }
 
 #text >h2 {
