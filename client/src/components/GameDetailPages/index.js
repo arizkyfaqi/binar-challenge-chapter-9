@@ -21,36 +21,41 @@ const GameDetailPages = () => {
             </div>
           </Stack>
         </Row>
-        <Row>
-          <Col xs={6} md={4} className="player-data">
+        <Row class="game-board">
+          <Col xs={6} md={4} id="player">
             <Stack gap={4}>
-              <div className="image">
-                <Image src="./assets/batu.png" />
+              <h1>PLAYER 1 </h1>
+              <div id="player-rock" className="selection">
+                <Image data-player="rock" src="./assets/batu.png" />
               </div>
-              <div className="image">
-                <Image src="./assets/gunting.png" />
+              <div id="player-scissor" className="selection">
+                <Image data-player="scissors" src="./assets/gunting.png" />
               </div>
-              <div className="image">
-                <Image src="./assets/kertas.png" />
+              <div id="player-paper" className="selection">
+                <Image data-player="paper" src="./assets/kertas.png" />
               </div>
             </Stack>
           </Col>
-          <Col xs={6} md={4} className="match">
+
+          <Col xs={6} md={4} id="result" className="match">
             <h1>VS</h1>
           </Col>
-          <Col xs={6} md={4} className="comp-data">
+
+          <Col xs={6} md={4} id="computer">
             <Stack gap={4}>
-              <div className="image">
-                <Image src="./assets/batu.png" />
+              <h1>COM </h1>
+              <div id="computer-rock" className="selection">
+                <Image data-comp="rock" src="./assets/batu.png" />
               </div>
-              <div className="image">
-                <Image src="./assets/gunting.png" />
+              <div id="computer-scissors" className="selection">
+                <Image data-comp="scissors" src="./assets/gunting.png" />
               </div>
-              <div className="image">
-                <Image src="./assets/kertas.png" />
+              <div id="computer-paper" className="selection">
+                <Image data-comp="paper" src="./assets/kertas.png" />
               </div>
             </Stack>
           </Col>
+
           <Stack>
             <div class="refresh">
               {/* <a href="javascript:location.reload(true)"> */}

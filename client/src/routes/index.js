@@ -1,14 +1,21 @@
-import GameDetailPages from "../components/GameDetailPages";
+import Home from "../components/pages/Home";
 import App from "../components/ProfileOnChange";
+import GameDetailPages from "../components/GameDetailPages";
+
 const routes = [
   {
-    path: "/gamedetailpages",
-    component: <GameDetailPages />,
+    path: "/",
+    component: <Home />,
+    exact: true,
   },
   {
     path: "/profile",
     component: <App />,
     exact: false,
+  },
+  {
+    path: "/gamedetailpages",
+    component: <GameDetailPages />,
   },
   {
     path: "*",
