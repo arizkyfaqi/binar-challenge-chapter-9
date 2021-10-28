@@ -22,6 +22,14 @@ module.exports = (sequelize, DataType) => {
       type: DataType.STRING,
       allowNull: false,
     },
+    level: {
+      type: DataType.STRING,
+      allowNull: false,
+    },
+    experience: {
+      type: DataType.STRING,
+      allowNull: false,
+    },    
     bio: {
       type: DataType.STRING,
       allowNull: false,
