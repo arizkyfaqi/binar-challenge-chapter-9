@@ -259,7 +259,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <NavbarClass />
+        {/* <NavbarClass /> */}
         <div className="App">
           <Page onToggle={this.handleToggleSection} />
           <Main activeSection={this.state.activeSection} />
