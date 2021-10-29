@@ -64,32 +64,30 @@ class ComingSoon extends Component {
                 </Row>
               </div>
             </Col>
-            <Col sm={8}>
-              <div className="profile-right">
-                <Row>
-                  <Col className="right-rows" sm={4}>
-                    <h4>COMING SOON</h4>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col></Col>
-                  <Col sm={4}>
-                    <Stack direction="horizontal" gap={3}>
-                      <div>
-                        <img src={pic1} alt="" className="size" />
-                      </div>
-                      <div>
-                        <img src={pic2} alt="" className="size" />
-                      </div>
-                      <div>
-                        <img src={pic1} alt="" className="size" />
-                      </div>
-                    </Stack>
-                  </Col>
-                  <Col></Col>
-                </Row>
-              </div>
-            </Col>
+            <div className="profile-right">
+              <Row>
+                <Col sm={8}>
+                  <div className="right-rows">
+                    <h5>COMING SOON</h5>
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col sm={4}>
+                  <Stack direction="horizontal" className="img-list"gap={3}>
+                    <div>
+                      <img src={pic1} alt="" className="size" />
+                    </div>
+                    <div>
+                      <img src={pic2} alt="" className="size" />
+                    </div>
+                    <div>
+                      <img src={pic1} alt="" className="size" />
+                    </div>
+                  </Stack>
+                </Col>
+              </Row>
+            </div>
           </Row>
         </Container>
       </>

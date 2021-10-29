@@ -68,14 +68,6 @@ class OngoingGame extends Component {
               <div className="main-game">
                 <h5>ENJOY YOUR GAME</h5>
                 <img src={pic1} alt="" />
-                {/* <Row>
-                  <Col sm={5}>
-                    <h4>ENJOY YOUR GAME</h4>
-                      <Row className="size2">
-                        <img src={pic1} alt="" />
-                      </Row>
-                  </Col>
-                </Row> */}
               </div>
             </Col>
           </Row>
