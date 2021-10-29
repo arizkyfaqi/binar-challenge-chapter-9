@@ -9,8 +9,8 @@ import "./style.css";
 import { BsChevronRight } from "react-icons/bs";
 import { FaRegClock } from "react-icons/fa";
 import { CgMediaLive } from "react-icons/cg";
-import pic1 from "../../img/rps-istock.jpg";
-import pic2 from "../../img/main-bg.jpg";
+import pic1 from "./rps-istock.jpg";
+import pic2 from "./main-bg.jpg";
 
 class ComingSoon extends Component {
   render() {
@@ -26,7 +26,7 @@ class ComingSoon extends Component {
                     <CgMediaLive style={{ width: "35px", height: "45px" }} />
                   </Col>
                   <Col sm={8}>
-                    <a href="./Ongoinggame">Current games</a>
+                    <a href="./ongoinggame">Current games</a>
                   </Col>
                   <Col
                     style={{
@@ -49,7 +49,7 @@ class ComingSoon extends Component {
                     />
                   </Col>
                   <Col sm={8}>
-                    <a href="./Comingsoongames">Upcoming games</a>
+                    <a href="./upcoming">Upcoming games</a>
                   </Col>
                   {/* PASSWORD */}
                   <Col

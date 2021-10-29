@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
 
 import NavbarClass from "../Navbar";
-import FooterClass from "../Footer";
+// import FooterClass from "../Footer";
 import "./profile.css";
 
 import { CgProfile } from "react-icons/cg";

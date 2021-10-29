@@ -2,7 +2,7 @@ import { React, Component } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import NavbarClass from "../Navbar";
 import "./style.css";
-import pic1 from "../../img/rps-istock.jpg";
+import pic1 from "./rps-istock.jpg";
 // import Image from 'react-bootstrap/Image';
 
 // import { CgProfile } from "react-icons/cg";
@@ -26,7 +26,7 @@ class OngoingGame extends Component {
                     <CgMediaLive style={{ width: "35px", height: "45px" }} />
                   </Col>
                   <Col sm={8}>
-                    <a href="./Ongoinggame">Current games</a>
+                    <a href="./ongoinggame">Current games</a>
                   </Col>
                   <Col
                     style={{
@@ -49,7 +49,7 @@ class OngoingGame extends Component {
                     />
                   </Col>
                   <Col sm={8}>
-                    <a href="./Comingsoongames">Upcoming games</a>
+                    <a href="./upcoming">Upcoming games</a>
                   </Col>
 
                   <Col

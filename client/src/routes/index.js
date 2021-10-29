@@ -1,94 +1,45 @@
-// // import { lazy } from "react";
-// import EditProfile from "../components/EditPage";
-// import ChangePassword from "../components/PasswordPage";
-// import ProfilePage from "../components/ProfilePage";
-import GameList from "../components/GameListPage";
-import OngoingGame from "../components/OngoingGame";
-import ComingSoon from "../components/ComingSoon";
+import Home from "../components/pages/Home";
 import App from "../components/ProfileOnChange";
-
-// const CreateUser = lazy(() => import("../components/CreateUser"));
-// const SearchUser = lazy(() => import("../components/SearchUser"));
-// const EditUser = lazy(() => import("../components/EditUser"));
-// const ProfilePage = lazy(() => import("../components/EditUser"));
+import GameList from "../components/GameListPage";
+import ComingSoon from "../components/ComingSoon";
+import OngoingGame from "../components/OngoingGame";
 
 const routes = [
-  // {
-  //   path: "/",
-  //   component: <CreateUser />,
-  //   exact: true,
-  // },
-  // {
-  //   path: "/profile",
-  //   component: <ProfilePage />,
-  //   exact: false,
-  // },
-  // {
-  //   path: "/edit-profile",
-  //   component: <EditProfile />,
-  //   exact: false,
-  // },
-  // {
-  //   path: "/change-password",
-  //   component: <ChangePassword />,
-  //   exact: false,
-  // },
   {
-    path: "/Games",
-    component: <GameList />,
-    exact: false,
+    path: "/",
+    component: <Home />,
+    exact: true,
   },
   {
-    path: "/Ongoinggame",
-    component: <OngoingGame />,
-    exact: false,
-  },
-  {
-    path: "/Comingsoongames",
-    component: <ComingSoon />,
-    exact: false,
-  },
-  {
-    path: "/change",
+    path: "/profile",
     component: <App />,
     exact: false,
   },
-  // {
-  //   path: "/search",
-  //   component: <SearchUser />,
-  //   exact: false,
-  // },
-  // {
-  //   path: "/edit",
-  //   component: <EditUser />,
-  //   exact: false,
-  // },
-  // {
-  //   path: "/counter",
-  //   component: <Counter />,
-  //   exact: false,
-  // },
-  // {
-  //   path: "/counter-class",
-  //   component: <CounterClass />,
-  //   exact: false,
-  // },
-  // {
-  //   path: "/rating",
-  //   component: <RatingComponent />,
-  //   exact: false,
-  // },
-  // {
-  //   path: "/rating-class",
-  //   // component: <RatingClassComponent />,
-  //   component: <Wrapper />,
-  //   exact: false,
-  // },
+
+  {
+    path: "/game",
+    component: <GameList/>,
+    exact: false,
+  },
+
+  {
+    path: "/ongoinggame",
+    component: <OngoingGame/>,
+    exact: false,
+  },
+
+  {
+    path: "/upcoming",
+    component: <ComingSoon/>,
+    exact: false,
+  },
+
   {
     path: "*",
     component: "Not Found",
     exact: false,
   },
+
 ];
 
 export default routes;

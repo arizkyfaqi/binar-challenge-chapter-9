@@ -9,7 +9,7 @@
 
 .profile-page {
   border-radius: 10px;
-  margin-top: 20% !important;
+  margin-top: 35% !important;
 }
 .edit-page {
   border-radius: 10px;
@@ -74,7 +74,16 @@
 }
 
 .main-game h5 {
+  margin-top: 10%;
   font-weight: bold;
   text-transform: uppercase;
   margin-left: 160px;
+}
+
+.main-game img {
+  margin-left: 5%;
+  height: auto;
+  max-height: 400px;
+  width: auto;
+  max-width: 400px;
 }
