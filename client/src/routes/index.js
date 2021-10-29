@@ -1,6 +1,7 @@
+import DetailPemain from "../components/DetailPemain/DetailPemain";
 import Home from "../components/pages/Home";
 import App from "../components/ProfileOnChange";
-import GameDetailPages from "../components/GameDetailPages";
+import GameDetailPages from "../components/GameDetailPages"; 
 
 const routes = [
   {
@@ -13,9 +14,16 @@ const routes = [
     component: <App />,
     exact: false,
   },
+
   {
-    path: "/gamedetailpages",
+    path: "/GameDetailPages",
     component: <GameDetailPages />,
+    exact: false,
+  },
+  {
+    path: "/detailpemain",
+    component: <DetailPemain />,
+    exact: false,
   },
   {
     path: "*",
@@ -25,3 +33,4 @@ const routes = [
 ];
 
 export default routes;
+
