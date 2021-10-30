@@ -1,5 +1,7 @@
+import DetailPemain from "../components/DetailPemain/DetailPemain";
 import Home from "../components/pages/Home";
 import App from "../components/ProfileOnChange";
+import GameDetailPages from "../components/GameDetailPages";
 import GameList from "../components/GameListPage";
 import ComingSoon from "../components/ComingSoon";
 import OngoingGame from "../components/OngoingGame";
@@ -31,6 +33,18 @@ const routes = [
   {
     path: "/upcoming",
     component: <ComingSoon/>,
+    exact: false,
+  },
+
+  {
+    path: "/GameDetailPages",
+    component: <GameDetailPages />,
+    exact: false,
+  },
+
+  {
+    path: "/detailpemain",
+    component: <DetailPemain />,
     exact: false,
   },
 

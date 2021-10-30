@@ -67,7 +67,9 @@ class OngoingGame extends Component {
             <Col sm={8}>
               <div className="main-game">
                 <h5>ENJOY YOUR GAME</h5>
+                <a href="./GameDetailPages">
                 <img src={pic1} alt="" />
+                </a>
               </div>
             </Col>
           </Row>
