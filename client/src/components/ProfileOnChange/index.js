@@ -1,8 +1,6 @@
 import React from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
-
-import NavbarClass from "../Navbar";
-import FooterClass from "../Footer";
+import Navbar from "../Navbar";
 import "./profile.css";
 
 import { CgProfile } from "react-icons/cg";
@@ -259,7 +257,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <NavbarClass />
+        <Navbar />
         <div className="App">
           <Page onToggle={this.handleToggleSection} />
           <Main activeSection={this.state.activeSection} />
