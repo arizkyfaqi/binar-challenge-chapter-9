@@ -1,0 +1,76 @@
+#game-detail-pages-wrapper {
+  height: 100vh;
+  background: #9c835f;
+  --back-btn-color: #724c21;
+  --title-color: #f9b23d;
+  --challenge-color: #bd0000;
+  --winner-color: #4c9654;
+  --draw-color: #035b0c;
+  --selection-color: #c4c4c4;
+  padding: 10px;
+}
+
+.header {
+  height: 10vh;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 5vmin;
+  color: var(--title-color);
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+.header a {
+  display: flex;
+  font-size: 2.5rem;
+  color: var(--back-btn-color);
+  text-decoration: none;
+}
+
+.logo {
+  height: 60px;
+}
+
+.refresh {
+  position: absolute;
+  left: 50%;
+  padding: 10px;
+  transform: translate(-50%, -90%);
+}
+
+.refresh img {
+  max-width: 5vh;
+  cursor: pointer;
+}
+
+#table-wrapper {
+  padding: 50px;
+  text-align: center;
+}
+
+.leaderboard {
+  position: absolute;
+  left: 45%;
+  top: 70%;
+  font-weight: bold;
+}
+
+#player {
+  text-align: center;
+}
+
+#player img:hover {
+  cursor: pointer;
+  transform: scale(110%);
+}
+
+#result {
+  text-align: center;
+}
+
+#computer {
+  text-align: center;
+}
