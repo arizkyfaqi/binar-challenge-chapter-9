@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
@@ -43,7 +42,7 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                to="/game-list"
+                to="/game"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
