@@ -2,6 +2,7 @@ import App from "../components/ProfileOnChange";
 import DetailPemain from "../components/DetailPemain/DetailPemain";
 import Home from "../components/pages/Home";
 import GameDetailPages from "../components/GameDetailPages";
+import AppAuth from "../components/Authentication";
 import GameList from "../components/GameListPage";
 import ComingSoon from "../components/ComingSoon";
 import OngoingGame from "../components/OngoingGame";
