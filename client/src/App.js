@@ -13,9 +13,7 @@ class App extends React.Component {
             {routes.map((route) => {
               return (
                 <Route key={route.path} exact={route.exact} path={route.path}>
-                  <Suspense fallback={<div>Loading...</div>}>
-                    {route.component}
-                  </Suspense>
+                  <Suspense fallback={<div>Loading...</div>}>{route.component}</Suspense>
                 </Route>
               );
             })}
