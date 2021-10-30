@@ -1,0 +1,65 @@
+.profile-left {
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  border-right: 5px solid #e9e9e9;
+  margin-left: -50px;
+  padding-right: 20px;
+}
+
+.profile-page {
+  border-radius: 10px;
+  margin-top: 20% !important;
+}
+.edit-page {
+  border-radius: 10px;
+}
+.password-page {
+  border-radius: 10px;
+}
+
+.profile-page:hover,
+.edit-page:hover,
+.password-page:hover {
+  background-color: #e9e9e9;
+}
+
+.profile-page a,
+.edit-page a,
+.password-page a {
+  font-size: 14px;
+  padding-top: 10px;
+  /* margin-left: 20px; */
+  /* position: absolute; */
+  /* font-weight: bold; */
+  text-decoration: none;
+  color: black !important;
+  display: flex;
+}
+
+/* .profile-page a:hover,
+.edit-page a:hover,
+.password-page a:hover {
+  color: grey;
+} */
+
+/* PROFILE RIGHT */
+
+.profile-right {
+  /* width: 40%; */
+  margin-left: -25%;
+  /* display: flex; */
+  /* border: 1px solid black; */
+  text-align: center;
+}
+
+.profile-right h4 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 30% 0 5%;
+}
+
+.profile-right p {
+  margin-top: 20px;
+  font-size: 16px;
+}

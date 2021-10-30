@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useState, useEffect } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Link } from "react-router-dom";
@@ -58,11 +57,7 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="/game-list"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
+              <Link to="/game" className="nav-links" onClick={closeMobileMenu}>
                 Game
               </Link>
             </li>
@@ -81,7 +76,7 @@ function Navbar() {
             <li className="nav-item">
               <Link
                 to="/sign-up"
-                className="nav-links-mobile"
+                className="nav-links"
                 onClick={closeMobileMenu}
               >
                 Sign Up
