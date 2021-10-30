@@ -11,7 +11,7 @@
 .profile-page {
   cursor: pointer;
   border-radius: 10px;
-  margin-top: 20% !important;
+  margin-top: 40% !important;
   margin-bottom: 20px;
 }
 .edit-page {
@@ -46,8 +46,8 @@
 .profile,
 .edit,
 .password {
-  width: 100%;
-  margin-left: 10%;
+  width: 75%;
+  margin-left: 20%;
   text-align: center;
 }
 
@@ -56,7 +56,7 @@
 .password h4 {
   font-weight: bold;
   text-transform: uppercase;
-  margin: 20% 0 5%;
+  margin: 40% 0 5%;
 }
 
 .profile p,
