@@ -3,6 +3,10 @@ const app = express();
 const db = require('./app/db')
 const detailpemain = require('./app/routes/detailpemain')
 
+
+const db = require('./app/db')
+const detailpemain = require('./app/routes/detailpemain')
+
 app.use(express.json());
 app.use('/detailpemain', detailpemain)
 

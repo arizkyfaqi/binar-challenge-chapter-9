@@ -11,7 +11,7 @@ const GameDetailPages = () => {
         <Row className="header">
           <Stack direction="horizontal" gap={3}>
             <div>
-              <a href="/game">&lt;</a>
+              <a href="/gamelistpage">&lt;</a>
             </div>
             <div>
               <Image src="./assets/logo.png" className="logo" />
