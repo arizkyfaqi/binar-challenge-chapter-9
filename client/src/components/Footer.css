@@ -40,11 +40,11 @@
 }
 
 .social-logo {
-  color: #fff;
+  color: #fff !important;
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: none !important;
   font-size: 2rem;
   display: flex;
   align-items: center;
