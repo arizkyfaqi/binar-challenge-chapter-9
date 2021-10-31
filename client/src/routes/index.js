@@ -41,19 +41,17 @@ const routes = [
     component: <GameDetailPages />,
     exact: false,
   },
-
   {
     path: "/detailpemain",
     component: <DetailPemain />,
     exact: false,
   },
-
   {
     path: "*",
     component: "Not Found",
     exact: false,
   },
-
 ];
 
 export default routes;
+
