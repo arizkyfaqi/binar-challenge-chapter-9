@@ -23,12 +23,14 @@ video {
     color: white;
     font-size: 70px;
     margin-top: -0px;
+    font-family: 'Georama', sans-serif;
   }
 
   .hero-container > p {
     color:rgb(233, 144, 10);
     font-size: 25px;
     margin-bottom: 15px;
+    font-family: 'Georama', sans-serif;
   }
 
   .hero-btns {

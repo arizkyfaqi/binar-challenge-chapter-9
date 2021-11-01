@@ -11,9 +11,9 @@
   min-height: 100vh;
   place-items: center;
   background-color: #3434b1;
-  background-image: linear-gradient(315deg, #9ea80c 0%, #0b8f2c 80%);
+  background-image: linear-gradient(315deg, #073180 0%, #9d9ece 80%);
   font-family: "Montserrat", sans-serif;
-  padding: 80px;
+  padding-top: 80px;
 }
 
 #suit h1 {

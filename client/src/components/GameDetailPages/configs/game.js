@@ -3,7 +3,7 @@ export const settings = {
   userName: "Player 1",
   pcName: "Computer",
   winMessage: "You won!",
-  tieMessage: "It's a tie!",
+  tieMessage: "Draw!",
   lostMessage: "You lost!",
   waitingMessage: "Waiting for your selection!",
   winTarget: 3,
