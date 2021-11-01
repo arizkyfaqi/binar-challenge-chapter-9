@@ -3,11 +3,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import NavbarClass from "../Navbar";
 import "./style.css";
 import pic1 from "./rps-istock.jpg";
-// import Image from 'react-bootstrap/Image';
-
-// import { CgProfile } from "react-icons/cg";
-// import { GrEdit } from "react-icons/gr";
-// import { GrSecure } from "react-icons/gr";
 import { BsChevronRight } from "react-icons/bs";
 import { FaRegClock } from "react-icons/fa";
 import { CgMediaLive } from "react-icons/cg";

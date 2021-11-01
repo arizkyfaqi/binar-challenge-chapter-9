@@ -23,9 +23,11 @@
 #text > h2 {
   font-size: 35px;
   color: black;
+  font-family: "Georama", sans-serif;
 }
 
 #text > p {
   font-size: 55px;
   color: rgb(15, 22, 112);
+  font-family: "Georama", sans-serif;
 }

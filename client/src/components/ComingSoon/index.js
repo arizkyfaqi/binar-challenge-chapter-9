@@ -2,10 +2,6 @@ import { React, Component } from "react";
 import { Col, Container, Row, Stack } from "react-bootstrap";
 import NavbarClass from "../Navbar";
 import "./style.css";
-
-// import { CgProfile } from "react-icons/cg";
-// import { GrEdit } from "react-icons/gr";
-// import { GrSecure } from "react-icons/gr";
 import { BsChevronRight } from "react-icons/bs";
 import { FaRegClock } from "react-icons/fa";
 import { CgMediaLive } from "react-icons/cg";
@@ -51,7 +47,6 @@ class ComingSoon extends Component {
                   <Col sm={8}>
                     <a href="./upcoming">Upcoming games</a>
                   </Col>
-                  {/* PASSWORD */}
                   <Col
                     style={{
                       display: "flex",
