@@ -29,11 +29,7 @@ module.exports = (sequelize, DataType) => {
     experience: {
       type: DataType.STRING,
       allowNull: false,
-<<<<<<< HEAD
     },
-=======
-    },    
->>>>>>> 1c181101aaf52eb3ba3dacc86f984cdff3307fde
     bio: {
       type: DataType.STRING,
       allowNull: false,
