@@ -32,23 +32,6 @@ const routes = [
     component: <ComingSoon />,
     exact: false,
   },
-  {
-    path: "/game",
-    component: <GameList/>,
-    exact: false,
-  },
-
-  {
-    path: "/ongoinggame",
-    component: <OngoingGame/>,
-    exact: false,
-  },
-
-  {
-    path: "/upcoming",
-    component: <ComingSoon/>,
-    exact: false,
-  },
 
   {
     path: "/GameDetailPages",
