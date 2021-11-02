@@ -34,7 +34,7 @@ const routes = [
   },
 
   {
-    path: "/GameDetailPages",
+    path: "/gamedetailpages",
     component: <GameDetailPages />,
     exact: false,
   },
