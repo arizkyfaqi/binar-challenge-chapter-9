@@ -44,9 +44,5 @@ module.exports = (sequelize, DataType) => {
     },
   });
 
-  // UserGame.prototype.validPassword = async (inputPassword, userPassword) => {
-  //   return await bcrypt.compare(inputPassword, userPassword);
-  // };
-
   return UserGame;
 };
