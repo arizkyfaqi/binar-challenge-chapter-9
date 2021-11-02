@@ -3,6 +3,7 @@ import DetailPemain from "../components/DetailPemain/DetailPemain";
 import Home from "../components/pages/Home";
 import GameDetailPages from "../components/GameDetailPages";
 import AppAuth from "../components/Authentication";
+import AppAuthDua from "../components/Auth/";
 import GameList from "../components/GameListPage";
 import ComingSoon from "../components/ComingSoon";
 import OngoingGame from "../components/OngoingGame";
@@ -56,6 +57,16 @@ const routes = [
   {
     path: "/dash",
     component: <AppAuth />,
+    exact: false,
+  },
+  {
+    path: "/register",
+    component: <AppAuthDua />,
+    exact: false,
+  },
+  {
+    path: "/logindua",
+    component: <AppAuthDua />,
     exact: false,
   },
   {

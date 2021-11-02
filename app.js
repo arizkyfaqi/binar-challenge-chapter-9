@@ -1,16 +1,17 @@
 const express = require("express");
 const app = express();
-const db = require('./app/db')
-const detailpemain = require('./app/routes/detailpemain')
+const cors = require("cors");
+const db = require("./app/db");
+const detailpemain = require("./app/routes/detailpemain");
 
+const authRouters = require("./app/routes/jwtAuth");
+
+app.use(cors());
 app.use(express.json());
-app.use('/detailpemain', detailpemain)
 
+app.use("/detailpemain", detailpemain);
 
-
-const PORT = 3003;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+app.use("/auth", authRouters);
+// app.use("/dashboard", require("./routes/dashboard"));
 
 module.exports = app;
