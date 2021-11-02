@@ -1,8 +1,6 @@
-import React from "react";
+import React, { useState, useEffect, createRef } from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
-
-import NavbarClass from "../Navbar";
-import FooterClass from "../Footer";
+import Navbar from "../Navbar";
 import "./profile.css";
 
 import { CgProfile } from "react-icons/cg";
@@ -10,7 +8,69 @@ import { GrEdit } from "react-icons/gr";
 import { GrSecure } from "react-icons/gr";
 import { BsChevronRight } from "react-icons/bs";
 
+// const ProfilePage = () => {
+//   const [profile, setProfile] = useState([]);
+//   const getProfile = async () => {
+//     try {
+//       const response = await fetch("http://localhost:5000/profile");
+//       const jsonData = await response.json();
+
+//       setProfile(jsonData);
+//     } catch (err) {
+//       console.log(err.message);
+//     }
+//   };
+
+//   useEffect(() => {
+//     getProfile();
+//   }, []);
+
 class ProfilePage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+    };
+  }
+
+  async componentDidMount() {
+    const url = "http://localhost:5000/profile";
+    const response = await fetch(url);
+    const data = await response.json();
+    this.setState({
+      name: data[0].name,
+      email: data[0].email,
+      level: data[0].level,
+      experience: data[0].experience,
+    });
+    console.log(data);
+  }
+
+  // constructor(props) {
+  //   super(props);
+
+  //   this.state = {
+  //     user: "",
+  //     email: "",
+  //     experience: "",
+  //     level: "",
+  //   };
+  // }
+
+  // async componentDidMount() {
+  //   const url = "http://localhost:5000/profile";
+  //   const response = await fetch(url);
+  //   const data = await response.json();
+  //   const { name, email, level, experience } = this.state;
+  //   this.setState({
+  //     name: data.result,
+  //     email: email,
+  //     level: level,
+  //     experience: experience,
+  //   });
+  //   console.log(data);
+  // }
+
   get show() {
     return this.props.activeSection === "profile";
   }
@@ -32,10 +92,21 @@ class ProfilePage extends React.Component {
                       marginBottom: "20px",
                     }}
                   />
-                  <p>Name: xxxxxxxxxxxx</p>
-                  <p>Email Address: xxxxxxxxxxxx</p>
+                  {/* {profile.map((profile) => (
+                <div>
+                  <p>Name: {profile.name}</p>
+                  <p>Email Address: {profile.email}</p>
+                  <p>Level: {profile.level}</p>
+                  <p>Experience: {profile.experience}</p>
+                </div>
+              ))} */}
+                  <p>{`Name: ${this.state.name}`}</p>
+                  <p>{`Email Address: ${this.state.email}`}</p>
+                  <p>{`Level: ${this.state.level}`}</p>
+                  <p>{`Experience: ${this.state.experience}`}</p>
+                  {/* <p>Email Address: xxxxxxxxxxxx</p>
                   <p>Level: xxxxxxxxxxxx</p>
-                  <p>Experience: xxxxxxxxxxxx</p>
+                  <p>Experience: xxxxxxxxxxxx</p> */}
                 </Col>
                 <Col></Col>
               </Row>
@@ -259,7 +330,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <NavbarClass />
+        <Navbar />
         <div className="App">
           <Page onToggle={this.handleToggleSection} />
           <Main activeSection={this.state.activeSection} />

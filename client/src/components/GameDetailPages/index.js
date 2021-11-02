@@ -1,72 +1,99 @@
-import { React } from "react";
-import Image from "react-bootstrap/Image";
-import { Col, Container, Row, Stack } from "react-bootstrap";
-import "./index.css";
-import StickyHeadTable from "./table";
+import React, { useState } from "react";
+import Navbar from "../Navbar";
+import { Title } from "./Title";
+import { Round } from "./Round";
+import { Playground } from "./Playground";
+import { Profile } from "./Profile";
+import { User } from "./User";
+import { Choice } from "./Choice";
+import { Computer } from "./Computer";
+import { Score } from "./Score";
+import { Message } from "./Message";
+import { Reset } from "./Reset";
 
-const GameDetailPages = () => {
+import { settings } from "./configs/game";
+
+import rock from "./assets/batu.png";
+import paper from "./assets/kertas.png";
+import scissors from "./assets/gunting.png";
+import trophy from "./assets/trophy.png";
+
+import "./styles.css";
+
+export default function GameDetailPages() {
+  let [game, setGame] = useState({
+    userSelection: "",
+    pcSelection: "",
+    round: 0,
+    userScore: 0,
+    pcScore: 0,
+    message: "",
+  });
+
+  const reset = () => {
+    setGame({
+      ...game,
+      userSelection: "",
+      pcSelection: "",
+      round: 0,
+      userScore: 0,
+      pcScore: 0,
+      message: "",
+    });
+  };
+
+  const { winMessage, tieMessage, lostMessage, winTarget } = settings;
+  const { pcScore, userScore } = game;
+
+  const play = (e) => {
+    if (pcScore < winTarget) {
+      const userSelection = e.target.parentNode.getAttribute("value");
+      const pcSelection = ["Rock", "Paper", "Scissors"][Math.floor(Math.random() * 3)];
+
+      userSelection === pcSelection
+        ? setGame({
+            ...(game.message = tieMessage),
+          })
+        : (userSelection === "Rock" && pcSelection === "Scissors") || (userSelection === "Paper" && pcSelection === "Rock") || (userSelection === "Scissors" && pcSelection === "Paper")
+        ? setGame({
+            ...(game.userScore += 1),
+            ...(game.message = winMessage),
+          })
+        : setGame({
+            ...(game.pcScore += 1),
+            ...(game.message = lostMessage),
+          });
+
+      setGame({
+        ...game,
+        round: (game.round += 1),
+        userSelection,
+        pcSelection,
+      });
+    }
+  };
+
   return (
-    <div id="game-detail-pages-wrapper">
-      <Container>
-        <Row className="header">
-          <Stack direction="horizontal" gap={3}>
-            <div>
-              <a href="/gamelistpage">&lt;</a>
-            </div>
-            <div>
-              <Image src="./assets/logo.png" className="logo" />
-            </div>
-            <div>
-              <h1>ROCK PAPER SCISSORS</h1>
-            </div>
-          </Stack>
-        </Row>
-        <Row class="game-board">
-          <Col xs={6} md={4} id="player">
-            <Stack gap={4}>
-              <h1>PLAYER 1 </h1>
-              <div id="player-rock" className="selection">
-                <Image data-player="rock" src="./assets/batu.png" />
-              </div>
-              <div id="player-scissor" className="selection">
-                <Image data-player="scissors" src="./assets/gunting.png" />
-              </div>
-              <div id="player-paper" className="selection">
-                <Image data-player="paper" src="./assets/kertas.png" />
-              </div>
-            </Stack>
-          </Col>
-
-          <Col xs={6} md={4} id="result" className="match">
-            <h1>VS</h1>
-          </Col>
-
-          <Col xs={6} md={4} id="computer">
-            <Stack gap={4}>
-              <h1>COM </h1>
-              <div id="computer-rock" className="selection">
-                <Image data-comp="rock" src="./assets/batu.png" />
-              </div>
-              <div id="computer-scissors" className="selection">
-                <Image data-comp="scissors" src="./assets/gunting.png" />
-              </div>
-              <div id="computer-paper" className="selection">
-                <Image data-comp="paper" src="./assets/kertas.png" />
-              </div>
-            </Stack>
-          </Col>
-
-          <Stack>
-            <div class="refresh">
-              {/* <a href="javascript:location.reload(true)"> */}
-              <Image src="./assets/refresh.png" />
-              {/* </a> */}
-            </div>
-          </Stack>
-        </Row>
-      </Container>
-      <StickyHeadTable />
+    <div id="suit" className="GameDetailPages">
+      <Navbar />
+      <Title />
+      <Round {...game} />
+      <Playground>
+        <Profile>
+          <User {...game} trophyIcon={trophy}>
+            <Choice {...game} value="Rock" onClick={play} choiceIcon={rock} />
+            <Choice {...game} value="Paper" onClick={play} choiceIcon={paper} />
+            <Choice {...game} value="Scissors" onClick={play} choiceIcon={scissors} />
+          </User>
+          <Score score={userScore} />
+        </Profile>
+        <Message {...game} />
+        <Profile>
+          <Computer {...game} rockIcon={rock} paperIcon={paper} scissorsIcon={scissors} trophyIcon={trophy} />
+          <Score score={pcScore} />
+        </Profile>
+      </Playground>
+      <Reset {...game} onClick={reset} />
     </div>
   );
-};
-export default GameDetailPages;
+}

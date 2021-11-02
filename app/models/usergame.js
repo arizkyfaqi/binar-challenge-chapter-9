@@ -29,7 +29,7 @@ module.exports = (sequelize, DataType) => {
     experience: {
       type: DataType.STRING,
       allowNull: false,
-    },    
+    },
     bio: {
       type: DataType.STRING,
       allowNull: false,
@@ -43,10 +43,6 @@ module.exports = (sequelize, DataType) => {
       allowNull: false,
     },
   });
-
-  // UserGame.prototype.validPassword = async (inputPassword, userPassword) => {
-  //   return await bcrypt.compare(inputPassword, userPassword);
-  // };
 
   return UserGame;
 };
