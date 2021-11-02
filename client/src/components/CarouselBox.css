@@ -1,8 +1,8 @@
 .carousel {
-    padding: 40px;
-    margin-top: 60px;
-    height: 110vh;
-    width: 100%;
+  padding: 40px;
+  margin-top: 60px;
+  height: 110vh;
+  width: 100%;
 }
 .carousel-img {
   width: 100%;
@@ -14,19 +14,20 @@
 
 #slider {
   background: rgb(235, 237, 241);
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width:99.5vw;
+  width: 100.5vw;
 }
 
-#text >h2 {
-    font-size: 35px;
-    color: black;
+#text > h2 {
+  font-size: 35px;
+  color: black;
+  font-family: "Georama", sans-serif;
 }
 
-
-#text >p {
-    font-size: 55px;
-    color: rgb(15, 22, 112);
+#text > p {
+  font-size: 55px;
+  color: rgb(15, 22, 112);
+  font-family: "Georama", sans-serif;
 }
