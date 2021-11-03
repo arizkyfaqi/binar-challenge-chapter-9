@@ -34,7 +34,7 @@ class ProfilePage extends React.Component {
   }
 
   async componentDidMount() {
-    const url = "http://localhost:5000/profile";
+    const url = "http://localhost:5000/profile/";
     const response = await fetch(url);
     const data = await response.json();
     this.setState({
@@ -123,6 +123,13 @@ class ProfilePage extends React.Component {
 class EditPage extends React.Component {
   get show() {
     return this.props.activeSection === "edit";
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+    };
   }
 
   render() {
