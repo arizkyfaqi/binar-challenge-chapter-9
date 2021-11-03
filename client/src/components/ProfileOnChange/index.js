@@ -125,13 +125,6 @@ class EditPage extends React.Component {
     return this.props.activeSection === "edit";
   }
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: [],
-    };
-  }
-
   render() {
     if (this.show) {
       return (
