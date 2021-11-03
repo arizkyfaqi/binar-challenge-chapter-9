@@ -1,5 +1,13 @@
 # Binar Challenge Chapter 9
 
-npm install <br />
-npm start <br />
-membuat brach baru : git branch new_brach
+1. Running Backend App
+```
+npm install
+nodemon index.js
+```
+2. Running Frontend App
+``` 
+cd client
+npm install
+npm start
+```
