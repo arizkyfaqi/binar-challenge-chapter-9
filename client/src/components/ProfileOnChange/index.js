@@ -8,23 +8,8 @@ import { GrEdit } from "react-icons/gr";
 import { GrSecure } from "react-icons/gr";
 import { BsChevronRight } from "react-icons/bs";
 
-// const ProfilePage = () => {
-//   const [profile, setProfile] = useState([]);
-//   const getProfile = async () => {
-//     try {
-//       const response = await fetch("http://localhost:5000/profile");
-//       const jsonData = await response.json();
-
-//       setProfile(jsonData);
-//     } catch (err) {
-//       console.log(err.message);
-//     }
-//   };
-
-//   useEffect(() => {
-//     getProfile();
-//   }, []);
-
+// ======== RIGHT SIDE ========
+// ======= PROFILE PAGE =======
 class ProfilePage extends React.Component {
   constructor(props) {
     super(props);
@@ -45,31 +30,6 @@ class ProfilePage extends React.Component {
     });
     console.log(data);
   }
-
-  // constructor(props) {
-  //   super(props);
-
-  //   this.state = {
-  //     user: "",
-  //     email: "",
-  //     experience: "",
-  //     level: "",
-  //   };
-  // }
-
-  // async componentDidMount() {
-  //   const url = "http://localhost:5000/profile";
-  //   const response = await fetch(url);
-  //   const data = await response.json();
-  //   const { name, email, level, experience } = this.state;
-  //   this.setState({
-  //     name: data.result,
-  //     email: email,
-  //     level: level,
-  //     experience: experience,
-  //   });
-  //   console.log(data);
-  // }
 
   get show() {
     return this.props.activeSection === "profile";
@@ -92,21 +52,10 @@ class ProfilePage extends React.Component {
                       marginBottom: "20px",
                     }}
                   />
-                  {/* {profile.map((profile) => (
-                <div>
-                  <p>Name: {profile.name}</p>
-                  <p>Email Address: {profile.email}</p>
-                  <p>Level: {profile.level}</p>
-                  <p>Experience: {profile.experience}</p>
-                </div>
-              ))} */}
                   <p>{`Name: ${this.state.name}`}</p>
                   <p>{`Email Address: ${this.state.email}`}</p>
                   <p>{`Level: ${this.state.level}`}</p>
                   <p>{`Experience: ${this.state.experience}`}</p>
-                  {/* <p>Email Address: xxxxxxxxxxxx</p>
-                  <p>Level: xxxxxxxxxxxx</p>
-                  <p>Experience: xxxxxxxxxxxx</p> */}
                 </Col>
                 <Col></Col>
               </Row>
@@ -120,7 +69,58 @@ class ProfilePage extends React.Component {
   }
 }
 
+// ======= RIGHT SIDE =======
+// ======= EDIT PAGE ========
 class EditPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+    };
+    this.onChangeName = this.onChangeName.bind(this);
+    this.onChangeEmail = this.onChangeEmail.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+
+  async componentDidMount() {
+    const url = "http://localhost:5000/profile";
+    const response = await fetch(url);
+    const data = await response.json();
+    this.setState({
+      name: data[0].name,
+      email: data[0].email,
+    });
+    console.log(data);
+  }
+
+  onChangeName(data) {
+    this.setState({
+      name: data.target.value,
+    });
+  }
+  onChangeEmail(data) {
+    this.setState({
+      email: data.target.value,
+    });
+  }
+
+  onSubmit = async () => {
+    const url = "http://localhost:5000/profile/1";
+    const response = await fetch(url, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name: this.state.name, email: this.state.email }),
+    });
+    const data = await response.json();
+    this.setState({
+      name: data[0].name,
+      email: data[0].email,
+    });
+    window.location = "/profile";
+  };
+
   get show() {
     return this.props.activeSection === "edit";
   }
@@ -153,16 +153,24 @@ class EditPage extends React.Component {
                   <Form.Control
                     className="form"
                     type="text"
+                    // value={this.state.name}
+                    onChange={this.onChangeName}
                     placeholder="Your name"
                   />
                   <p>Email Address</p>
                   <Form.Control
                     className="form"
                     type="email"
+                    // value={this.state.email}
+                    onChange={this.onChangeEmail}
                     placeholder="Your email address"
                   />
 
-                  <button type="button" className="btn">
+                  <button
+                    className="btn"
+                    value="Update User"
+                    onClick={this.onSubmit}
+                  >
                     Save
                   </button>
                 </Col>
@@ -178,6 +186,8 @@ class EditPage extends React.Component {
   }
 }
 
+// ======== RIGHT SIDE ========
+// ======= PASSWORD PAGE =======
 class PasswordPage extends React.Component {
   get show() {
     return this.props.activeSection === "password";
@@ -229,6 +239,7 @@ class PasswordPage extends React.Component {
   }
 }
 
+// ======== LEFT-SIDE ========
 const Page = ({ onToggle }) => (
   <div className="buttons">
     <Container>
@@ -309,6 +320,7 @@ const Page = ({ onToggle }) => (
   </div>
 );
 
+// ======= FUNCTION ACTIVE SECTION =======
 const Main = ({ activeSection }) => (
   <React.Fragment>
     <ProfilePage activeSection={activeSection} />
